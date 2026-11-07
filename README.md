@@ -1,44 +1,44 @@
 # Installation – Software Developer, Java Group 63
 
-Här dokumenterar jag de program jag installerat på min dator som en del av
-kursens installationsuppgift.
+This is where I document the software I installed on my computer as part of the
+course's installation assignment.
 
-## Installerade program
+## Installed software
 
-| Program            | Version                  | Syfte                                |
-| ------------------ | ------------------------ | ------------------------------------ |
-| Git                | 2.55.0.windows.5         | Versionshantering                    |
-| JDK (Java)         | 21.0.12.1 (`javac`)      | Kompilera och köra Java-program      |
-| IntelliJ IDEA      | 2026.1                   | Utvecklingsmiljö (IDE)               |
-| Visual Studio Code | Installerad              | Kodredigerare                        |
-| MySQL              | Installerad              | Databas                              |
-| Docker Desktop     | Installerad              | Containermiljö                       |
-| Node.js            | Installerad              | JavaScript-runtime (vid behov)       |
-| Maven              | 3.9.16                   | Byggverktyg/projekthantering för Java (JavaFX) |
+| Software           | Version             | Purpose                                      |
+| ------------------ | ------------------- | -------------------------------------------- |
+| Git                | 2.55.0.windows.5    | Version control                              |
+| JDK (Java)         | 21.0.12.1 (`javac`) | Compile and run Java programs                |
+| IntelliJ IDEA      | 2026.1              | Integrated development environment (IDE)     |
+| Visual Studio Code | Installed           | Code editor                                  |
+| MySQL              | Installed           | Database                                     |
+| Docker Desktop     | Installed           | Container environment                        |
+| Node.js            | Installed           | JavaScript runtime (when needed)             |
+| Maven              | 3.9.16              | Build tool / project management for Java (JavaFX) |
 
-## Verifiering av installationerna
+## Verifying the installations
 
-Kommandon jag använt för att kontrollera att programmen fungerar:
+Commands I used to check that the software works:
 
 ```bash
 git --version      # git version 2.55.0.windows.5
 javac -version     # javac 21.0.12.1
-mvn -version       # Apache Maven 3.9.16, kör på JDK 21 via JAVA_HOME
+mvn -version       # Apache Maven 3.9.16, running on JDK 21 via JAVA_HOME
 ```
 
-## Konfiguration av Git
+## Git configuration
 
 ```bash
 git config --global user.name   # Aphex
 git config --global user.email  # tobias.widjestam@gmail.com
 ```
 
-## Noteringar
+## Notes
 
-- `java -version` rapporterade Java 8 (1.8.0_503) medan `javac` är JDK 21 –
-  PATH/JAVA_HOME behöver ställas in så att `java` pekar på JDK 21.
-- **Maven 3.9.16 är nu installerat** på `C:\Users\Administrator\apache-maven-3.9.16`
-  och lagt på PATH. `mvn -version` bekräftar att Maven kör på JDK 21 (via JAVA_HOME).
-- JavaFX 21 har testats via ett Maven-projekt (`hellofx`): `mvn package` och
-  `mvn javafx:run` fungerar. Maven laddar JavaFX-biblioteken automatiskt från
-  `pom.xml` – ingen manuell SDK behövs.
+- `java -version` reported Java 8 (1.8.0_503) while `javac` is JDK 21 –
+  PATH/JAVA_HOME needs to be configured so that `java` points to JDK 21.
+- **Maven 3.9.16 is now installed** at `C:\Users\Administrator\apache-maven-3.9.16`
+  and added to PATH. `mvn -version` confirms that Maven runs on JDK 21 (via JAVA_HOME).
+- JavaFX 21 has been tested with a Maven project (`hellofx`): `mvn package` and
+  `mvn javafx:run` both work. Maven downloads the JavaFX libraries automatically
+  from `pom.xml` – no manual SDK needed.
